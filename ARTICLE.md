@@ -4,7 +4,7 @@ Every ML research group eventually hits the same wall: someone needs to write do
 
 What I found, trying to do this myself (for a machine learning paper) is that the tooling for this specific problem barely exists. There are excellent total-cost-of-ownership calculators for procurement teams deciding whether to build a data center. There are generic GPU-hours calculators built around commercial cloud billing. What's missing is something built around how academic cluster (high performance computing - HPC) compute actually works with teh concept of a Service Unit (SU) rate, a multi-stage training pipeline, and a grant budget that needs a contingency line a reviewer can believe.
 
-So, here's mu first attempt in building one. This post walks through what it does, the assumptions baked into it, and more usefully, the mistakes I made getting there, because I think the process is as instructive as the result.
+So, here's my first attempt in building one. This post walks through what it does, the assumptions baked into it, and some ideas for further development.
 
 ---
 
