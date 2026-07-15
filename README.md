@@ -42,7 +42,6 @@ your institutional SU rate against rough commercial cloud tiers.
 hpc_cost_estimator.py          # the CLI — stdlib only, no pip install needed
 examples/
   pipeline_example_vlm.json    # example: CV/VLM research pipeline
-  pipeline_example_sabha.json  # example: modular-LM research pipeline
 ARTICLE.md                     # full writeup: methodology, assumptions, limitations
 ```
 
