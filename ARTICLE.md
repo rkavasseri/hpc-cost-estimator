@@ -2,7 +2,7 @@
 
 Every ML research group eventually hits the same wall: someone needs to write down, in dollars, what a training pipeline is going to cost. A PI budgeting a grant or preparing a submission to a conference. Or, a student requesting a compute allocation. A department deciding whether to buy time on a commercial cluster, or run it inhouse, or run on desktop GPUs. The number has to go on a form, and it has to be defensible.
 
-What I found, trying to do this myself (for a machine learning paper) is that the tooling for this specific problem barely exists. There are excellent total-cost-of-ownership calculators for procurement teams deciding whether to build a data center. There are generic GPU-hours calculators built around commercial cloud billing. What's missing is something built around how academic cluster (high performance computing - HPC) compute actually works with teh concept of a Service Unit (SU) rate, a multi-stage training pipeline, and a grant budget that needs a contingency line a reviewer can believe.
+What I found, trying to do this myself (for a machine learning paper) is that the tooling for this specific problem barely exists. There are excellent total-cost-of-ownership calculators for procurement teams deciding whether to build a data center. There are generic GPU-hours calculators built around commercial cloud billing. What's missing is something built around how academic cluster (high performance computing - HPC) compute actually works with the concept of a Service Unit (SU) rate, a multi-stage training pipeline, and a grant budget that needs a contingency line a reviewer can believe.
 
 So, here's my first attempt in building one. This post walks through what it does, the assumptions baked into it, and some ideas for further development.
 
@@ -12,7 +12,7 @@ So, here's my first attempt in building one. This post walks through what it doe
 
 My first instinct was to build this twice: a CLI for anyone comfortable in a terminal, and a spreadsheet with the same logic in live formulas for anyone who isn't. I actually tried both, and cross-validated them against each other until they produced identical numbers on the same input, down to the cent, against a costing document I'd built by hand earlier.
 
-Then I cut the spreadsheet. The people who run ML workflows aren't the spreadsheet types anyways. And, woudn't it be nice to integrate the cost estimator while setting up the repo itself? Maybe that can be used as a metric in developing leaner and more efficient runs, I thought.
+Then I cut the spreadsheet. The people who run ML workflows aren't the spreadsheet types anyways. 
 
 The people who actually use this, machine learning engineers, graduate students and postdocs scoping their own pipelines are already comfortable at a command line. The spreadsheet was solving a problem I didn't have: it added a second codebase to keep in sync, a second place for the math to drift, and an entire formula-validation workflow, for an audience that wouldn't understand how to use it. A single well-documented CLI, with plain JSON config files anyone can read or diff, was the better fit for who's actually going to use this. 
 
