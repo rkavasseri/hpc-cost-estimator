@@ -27,7 +27,7 @@ import csv as csv_module
 
 GPU_DEFAULTS = {
     "h100": {"peak_tflops_bf16": 989.0, "su_rate": 1.00},
-    "a100": {"peak_tflops_bf16": 312.0, "su_rate": 0.84},
+    "a100": {"peak_tflops_bf16": 312.0, "su_rate": 0.80},
 }
 
 # Rough on-demand commercial rates ($/GPU-hr), mid-2026 market, for --compare-commercial.
