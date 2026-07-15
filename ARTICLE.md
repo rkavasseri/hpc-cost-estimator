@@ -12,9 +12,9 @@ So, here's my first attempt in building one. This post walks through what it doe
 
 My first instinct was to build this twice: a CLI for anyone comfortable in a terminal, and a spreadsheet with the same logic in live formulas for anyone who isn't. I actually tried both, and cross-validated them against each other until they produced identical numbers on the same input, down to the cent, against a costing document I'd built by hand earlier.
 
-Then I cut the spreadsheet. The people who run ML workflows aren't the spreadsheet types anyways. And, woudn't it be nice to integrate the cost estimator while setting up teh repo itself? Maybe that can be used as a metric in developing leaner and more efficient runs, I thought.
+Then I cut the spreadsheet. The people who run ML workflows aren't the spreadsheet types anyways. And, woudn't it be nice to integrate the cost estimator while setting up the repo itself? Maybe that can be used as a metric in developing leaner and more efficient runs, I thought.
 
-The people who actually use this, machine learning engineers, graduate students and postdocs scoping their own pipelines are already comfortable at a command line. The spreadsheet was solving a problem I didn't have: it added a second codebase to keep in sync, a second place for the math to drift, and an entire formula-validation workflow, for an audience that wouldn't understand hot to use it. A single well-documented CLI, with plain JSON config files anyone can read or diff, was the better fit for who's actually going to use this. Building the spreadsheet wasn't wasted effort, though — it's how I found the bug below, which is worth describing regardless of which interface it happened in.
+The people who actually use this, machine learning engineers, graduate students and postdocs scoping their own pipelines are already comfortable at a command line. The spreadsheet was solving a problem I didn't have: it added a second codebase to keep in sync, a second place for the math to drift, and an entire formula-validation workflow, for an audience that wouldn't understand how to use it. A single well-documented CLI, with plain JSON config files anyone can read or diff, was the better fit for who's actually going to use this. 
 
 ---
 
